@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Adventure</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; background-color: #f7f9fc; }
+        h1 { color: #ff6b6b; margin-top: 50px; }
+        .button { background-color: #ff6b6b; color: white; padding: 15px 30px; margin: 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; }
+        .button:hover { background-color: #ff8787; }
+        #result { margin-top: 30px; font-size: 18px; }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Sweet Adventure</h1>
+    <p>Click below to start your journey!</p>
+    <button class="button" onclick="startAdventure()">Start Adventure</button>
+    <div id="result"></div>
+    <script>
+        function startAdventure() {
+            const messages = [
+                "You found the first sweet memory! 💖",
+                "You're amazing! Here's your second clue! 🌟",
+                "Congratulations! You've unlocked a special love note! 💌"
+            ];
+            let result = document.getElementById('result');
+            result.innerHTML = messages[Math.floor(Math.random() * messages.length)];
+        }
+    </script>
+</body>
+</html>
